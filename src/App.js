@@ -9,13 +9,12 @@ import './App.css'
 
 const App = () => {
     
-    // stack: valor por defecto. setStack: funcion que modifica el valor.
     const [stack, setStack] = useState("")
 
     const [hasOperation, setHasOperation] = useState(false)
 
     const items = words(stack, /[^-^+^*^/]+/g)
-    // (condicionChequeada) ? (resultadoSiEsTrue) : (resultadoSiEsFalse)
+
     const value = items.length > 0 ? items[items.length-1] : "0"
 
     return (
@@ -25,9 +24,7 @@ const App = () => {
                 setStack(`${stack}${number}`)
             }}/>
             <Functions 
-                onContentClear={clear => {
-                    setStack("")
-            }}
+                onContentClear={clear => { setStack("") }}
                 onDelete={() => {
                     if (stack.length > 0) {
                         const newStack = stack.substring(0, stack.length -1)

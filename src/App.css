@@ -9,8 +9,19 @@ body{
 }
 
 body{
-    padding-top: 20px;
+    padding-top: 100px;
     user-select: none;
+}
+
+header{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    left: 0%;
+    top: 0;
+    background-color: #3e4444;
+    position: fixed;
 }
 
 .react-calculator{
